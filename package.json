@@ -1,0 +1,19 @@
+{
+  "name": "react_tutorial",
+  "version": "1.0.0",
+  "description": "React Tutorial",
+  "main": "index.js",
+  "dependencies": {
+    "connect": "^3.4.0",
+    "serve-static": "^1.10.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "reactjs"
+  ],
+  "author": "Wataru Oguchi",
+  "license": "ISC"
+}
