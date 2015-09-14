@@ -1,5 +1,12 @@
 {
+  "ecmaFeatures": {
+    "jsx": true
+  },
   "env": {
     "node": true
+  },
+  "globals": {
+    "document": true,
+    "React": true
   }
 }
