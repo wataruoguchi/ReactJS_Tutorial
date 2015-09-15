@@ -38,7 +38,43 @@ var TodoList = React.createClass({
       <div className="active-todos">
         <h2>Active</h2>
         <ul>{rows}</ul>
+        <TodoForm/>
       </div>
+    );
+  }
+});
+
+/**
+ * TodoForm Component
+ * Invoke an event
+ */
+var TodoForm = React.createClass({
+  // getInitialState is a builtin method
+  getInitialState: function() {
+    return {
+      name: ""
+    };
+  },
+  handleNameChange: function(e) {
+    this.setState({
+      name: e.target.value
+    });
+  },
+  handleSubmit: function(e) {
+    e.preventDefault();
+    var name = this.state.name.trim();
+    alert(name);
+    this.setState({
+      name: ""
+    });
+  },
+  render: function() {
+    var disabled = this.state.name.trim().length <= 0;
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <input value={this.state.name} onChange={this.handleNameChange}></input>
+        <input type="submit" disabled={disabled}></input>
+      </form>
     );
   }
 });
